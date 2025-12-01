@@ -155,7 +155,7 @@ def update_bestand_verfuegbar(stueckzahl, material_ID):
     cursor.execute("""
     UPDATE material 
     SET bestand = bestand + ?, verfuegbar = verfuegbar + ? 
-    WHERE material_ID = ?""", (stueckzahl, stueckzahl, material_ID,))
+    WHERE material_ID = ?""", (stueckzahl, stueckzahl, material_ID))
     connection.commit()
     connection.close()
     
